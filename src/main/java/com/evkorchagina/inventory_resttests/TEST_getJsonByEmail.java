@@ -26,7 +26,7 @@ public class TEST_getJsonByEmail {
         String input="me@me";
         ClientConfig config = new DefaultClientConfig();
         Client client = Client.create(config);
-        WebResource service = client.resource(UriBuilder.fromUri("http://localhost:8080/Inventory_RESTServer/webresources/inventory/allbyemail/"+input).build());
+        WebResource service = client.resource(UriBuilder.fromUri("http://localhost:8080/Inventory_RESTServer/webresources/inventory/allbyemail_/"+input).build());
         System.out.println("Server output for email " + input +"\n");
         System.out.println();
         System.out.println(service.accept(MediaType.APPLICATION_JSON).get(String.class));
