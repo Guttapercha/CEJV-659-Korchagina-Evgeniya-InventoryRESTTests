@@ -17,7 +17,7 @@ public class TEST_createInventory {
 
     public static void main(String[] args) {
         System.out.println("TESTING METHOD createInventory \n");
-                
+
         String email = "him@him";
         String artist = "Beaylk";
         String album = "ooops";
@@ -25,11 +25,11 @@ public class TEST_createInventory {
         String state = "VG";
         String state_detailed = "unknown";
         String upc = "unknown";
-        String notes = "1 copy";
-       
+        String notes = "2 copy";
+
         try {
-            Inventory inv = new Inventory();            
-            
+            Inventory inv = new Inventory();
+
             inv.setEmail(email);
             inv.setArtist(artist);
             inv.setAlbum(album);
@@ -38,7 +38,7 @@ public class TEST_createInventory {
             inv.setState_detailed(state_detailed);
             inv.setUpc(upc);
             inv.setNotes(notes);
-           
+            inv.setStatus(true);
             String resturl = "http://localhost:8080/Inventory_RESTServer/webresources/inventory/create";
             Client client = Client.create();
             WebResource webResource = client.resource(resturl);
